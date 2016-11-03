@@ -1,0 +1,19 @@
+title: Blog
+email: rostyslav.rozhko@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "vladimir.com"
+
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - gulpfile.js
