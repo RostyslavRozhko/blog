@@ -1,19 +1,80 @@
 ---
 layout: default_photos
 title: Photos
+
+images:
+    - path: photos/cats/award-winner.jpg
+      size: 625x833
+    - path: photos/cats/ballon-cat.jpg
+      size: 625x417
+    - path: photos/cats/best-nap-cat.jpg
+      size: 500x667
+    - path: photos/cats/big-little-cat.jpg
+      size: 625x349
+    - path: photos/cats/bodyguard.jpg
+      size: 499x508
+    - path: photos/cats/buns-cat.jpg
+      size: 599x590
+    - path: photos/cats/burger-cat.jpg
+      size: 500x377
+    - path: photos/cats/cat-and-boy.jpg
+      size: 625x469
+    - path: photos/cats/cats-in-act.jpg
+      size: 600x673
+    - path: photos/cats/closet-dweller.jpg
+      size: 625x469
+    - path: photos/cats/coach-cat.jpg
+      size: 625x469
+    - path: photos/cats/cool-cat.jpg
+      size: 500x469
+    - path: photos/cats/cow-and-cat.jpg
+      size: 500x500
+    - path: photos/cats/delight-cat.jpg
+      size: 625x467
+    - path: photos/cats/disafected-cat.jpg
+      size: 625x469
+    - path: photos/cats/existential-cat.jpg
+      size: 500x666
+    - path: photos/cats/fashion-icon.jpg
+      size: 625x837
+    - path: photos/cats/fauset-drinker.jpg
+      size: 625x469
+    - path: photos/cats/friendly-cat.jpg
+      size: 616x794
+    - path: photos/cats/inception-cat.jpg
+      size: 625x428
+    - path: photos/cats/kisser-cat.jpg
+      size: 500x592
+    - path: photos/cats/loving-cat.jpg
+      size: 625x418
+    - path: photos/cats/mirror-cat.jpg
+      size: 500x375
+    - path: photos/cats/morris-fan.jpg
+      size: 500x365
+    - path: photos/cats/nap-cat.jpg
+      size: 625x833
+    - path: photos/cats/owner-thief.jpg
+      size: 450x600
+    - path: photos/cats/piano-cat.jpg
+      size: 625x834
+    - path: photos/cats/protective-mom-cat.jpg
+      size: 625x469
+    - path: photos/cats/selfie-cat.jpg
+      size: 500x666
+    - path: photos/cats/shadow-fighter.jpg
+      size: 625x625
+    - path: photos/cats/taco-rejector-cat.jpg
+      size: 625x1111
 ---
 
 <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    {% for image in page.images %}
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="https://iso.500px.com/wp-content/uploads/2016/06/stock-photo-142869191-1-1500x1000.jpg" itemprop="contentUrl" data-size="1500x1000">
-            <img class="photo" src="https://iso.500px.com/wp-content/uploads/2016/06/stock-photo-142869191-1-1500x1000.jpg" itemprop="thumbnail" alt="Image description" />
+        <a href="{{ image.path }}" itemprop="contentUrl" data-size="{{ image.size }}">
+            <img class="photo" src="{{ image.path }}" itemprop="thumbnail" alt="Image description" />
         </a>
     </figure>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="https://static.pexels.com/photos/9752/taking-photo-hiking-sport-adventure.jpg" itemprop="contentUrl" data-size="1920x1200">
-            <img class="photo"  src="https://static.pexels.com/photos/9752/taking-photo-hiking-sport-adventure.jpg" itemprop="thumbnail" alt="Image description" />
-        </a>
-     </figure>
+    {% endfor %}
 </div>
 
 <script src="js/main.js"></script>
